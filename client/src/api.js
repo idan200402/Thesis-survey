@@ -1,4 +1,4 @@
-const BASE = "http://localhost:3001";
+const BASE = import.meta.env.DEV ? "http://localhost:3001" : "";
 
 export async function submitSurvey(survey) {
   const res = await fetch(`${BASE}/api/submit`, {
