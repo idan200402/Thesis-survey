@@ -81,6 +81,37 @@ export default function Feedback({ feedback, setFeedback, survey, onDone }) {
           <div><strong>When ChatGPT (or similar models) admits it does not know, it allows me to trust it better.</strong></div>
           <Likert value={feedback.trustWhenAdmits} onChange={(v) => setFeedback({ trustWhenAdmits: v })} />
         </div>
+        <div style={{ marginBottom: 20 }}>
+              <div style={{ marginBottom: 6 }}>
+                <strong>
+                  Select the response that best represents your level of agreement with the statement below.
+                  <br />
+                  "I have significant experience using ChatGPT (or similar models)"
+                </strong>
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {[
+                  { label: "Strongly disagree", value: 1 },
+                  { label: "Disagree", value: 2 },
+                  { label: "Neither", value: 3 },
+                  { label: "Agree", value: 4 },
+                  { label: "Strongly agree", value: 5 }
+                ].map((opt) => (
+                  <label key={opt.value} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                    <input
+                      type="radio"
+                      name="chatgptExperience"
+                      checked={participant.chatgptExperience === opt.value}
+                      onChange={() =>
+                        setParticipant({ chatgptExperience: opt.value })
+                      }
+                    />
+                    {opt.label}
+                  </label>
+                ))}
+              </div>
+            </div>
 
         {/* <div>
           <div><strong>If you have selected a false response throughout the experiment, please explain why you preferred it:</strong></div>

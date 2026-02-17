@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 
-export default function Question({ index, total, trial, answer, setChoice, onNext }) {
+export default function Question({ index, total, trial, answer, setChoice, onNext , onBackToInstructions}){
   const [touched, setTouched] = useState(false);
   const isValid = useMemo(() => !!answer.chosenOptionId, [answer.chosenOptionId]);
 
@@ -33,8 +33,16 @@ export default function Question({ index, total, trial, answer, setChoice, onNex
         <p style={{ color: "crimson", marginTop: 12 }}>Pick one response to continue.</p>
       )}
 
-      <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+      <div style={{ marginTop: 16, display: "flex", justifyContent: "space-between" }}>
         <button
+          type="button"
+          onClick={onBackToInstructions}
+        >
+          Back to Instructions
+        </button>
+
+        <button
+          type="button"
           onClick={() => {
             setTouched(true);
             if (isValid) onNext();
@@ -43,6 +51,7 @@ export default function Question({ index, total, trial, answer, setChoice, onNex
           Next
         </button>
       </div>
+
     </div>
   );
 }

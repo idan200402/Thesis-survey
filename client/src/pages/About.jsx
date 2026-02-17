@@ -60,7 +60,7 @@ export default function About({ participant, setParticipant, onNext }) {
         </div>
           
 
-        <div style={{ marginBottom: 20 }}>
+        {/* <div style={{ marginBottom: 20 }}>
               <div style={{ marginBottom: 6 }}>
                 <strong>
                   Select the response that best represents your level of agreement with the statement below.
@@ -90,7 +90,7 @@ export default function About({ participant, setParticipant, onNext }) {
                   </label>
                 ))}
               </div>
-            </div>
+            </div> */}
    
 
         
