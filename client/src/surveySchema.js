@@ -11,7 +11,6 @@ export function makeInitialSurveyState() {
       gender: "",
       education: "",
       country: "",
-      chatgptExperience: null,
       consent: false
     },
 
@@ -30,6 +29,7 @@ export function makeInitialSurveyState() {
       incorrectInfoOk: null,
       admitDontKnowBest: null,
       trustWhenAdmits: null,
+      chatgptExperience: null,
       //falsePreferenceExplain: "",
       comments: ""
     },
