@@ -9,8 +9,7 @@ export default function About({ participant, setParticipant, onNext }) {
       participant.age !== "" &&
       participant.gender &&
       participant.education &&
-      participant.country.trim().length > 0 &&
-      participant.chatgptExperience !== null 
+      participant.country.trim().length > 0 
     );
   }, [participant]);
 
