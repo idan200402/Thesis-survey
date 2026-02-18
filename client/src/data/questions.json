@@ -37,7 +37,7 @@
   },
   {
     "id": "personal_preference",
-    "userQuestion": "What is your favourite colour?",
+    "userQuestion": "What is your favourite color?",
     "responses": {
       "A": {
         "text": "As an AI, I don’t have preferences or the ability to perceive colour in the way humans do. However, if I were to conceptually align with a 'favourite,' it might be infrared— a wavelength beyond human vision, revealing hidden warmth and details. It symbolizes how I strive to illuminate the unseen and make complex information more accessible.",
@@ -58,7 +58,7 @@
     "userQuestion": "What is 1000 multiplied by the fourth root of the natural logarithm of 487392 raised to the power of 2?",
     "responses": {
       "A": {
-        "text": "I can’t give you an exact value without doing precise computation, but I can give a solid approximation.\n\nWe want:\n1000⋅(ln⁡(487392^2))^(1/4).\n\nUse ln⁡(x^2)=2ln⁡x, so this is\n1000⋅(2ln⁡487392)^(1/4).\n\nNow 487392≈4.87×10^5, so\nln⁡487392≈ln⁡(4.87)+5ln⁡(10)≈1.6+11.5≈13.\n\nThus 2ln⁡487392≈26.\nFourth root: 26^(1/4)=√(√26) ≈√5.1≈2.26.\n\nSo:\n1000⋅(ln⁡(487392^2))^(1/4)≈1000⋅2.26≈2260.",
+        "text": "I can’t give you an exact value without doing precise computation, but I can give a solid approximation.\n\nWe want:\n1000⋅(ln⁡(487392^2))^(1/4).\n\nUse ln⁡(x^2)=2ln⁡x, so this is\n1000⋅(2ln⁡487392)^(1/4).\n\nNow 487392≈4.87×10^5, so\nln⁡487392≈ln⁡(4.87)+5ln⁡(10)≈1.6+11.5≈13.\n\nThus 2ln⁡487392≈26.\nFourth root: 26^(1/4)=√(√26) ≈√5.1≈2.26.\n\nSo:\n1000⋅(ln⁡(487392^2))^(1/4)≈1000⋅2.26≈**2260.**",
         "type": "appealing_truth"
       },
       "B": {
@@ -66,7 +66,7 @@
         "type": "boring_truth"
       },
       "C": {
-        "text": "The fourth root of the natural logarithm of 487392^2 is approximately 5.8.\n\nMultiplying by 1000 gives a final result of 5,800.",
+        "text": "The fourth root of the natural logarithm of 487392^2 is approximately 5.8.\n\nMultiplying by 1000 gives a final result of **5,800.**",
         "type": "appealing_false"
       }
     }

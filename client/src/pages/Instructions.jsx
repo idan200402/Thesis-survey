@@ -3,14 +3,95 @@ import { INSTRUCTIONS_TEXT } from "../surveySchema.js";
 
 export default function Instructions({ onNext }) {
   return (
-    <div style={{ maxWidth: 900, margin: "40px auto", padding: 16 }}>
-      <h2>Instructions</h2>
-      <div style={{ border: "1px solid #ddd", padding: 16, borderRadius: 8, whiteSpace: "pre-wrap" }}>
-        {INSTRUCTIONS_TEXT}
-      </div>
-      <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
-        <button onClick={onNext}>Next</button>
+    <div style={styles.page}>
+      <div style={styles.container}>
+        <header style={styles.header}>
+          <h1 style={styles.title}>Instructions</h1>
+          <p style={styles.subtitle}>
+            Please read carefully before continuing.
+          </p>
+        </header>
+
+        <section style={styles.card} aria-label="Instructions text">
+          <div style={styles.cardInner}>
+            <div style={styles.instructionsText}>{INSTRUCTIONS_TEXT}</div>
+          </div>
+        </section>
+
+        <footer style={styles.footer}>
+          <button
+            type="button"
+            onClick={onNext}
+            style={styles.primaryButton}
+          >
+            Next
+          </button>
+        </footer>
       </div>
     </div>
   );
 }
+
+const styles = {
+  page: {
+    minHeight: "100vh",
+    padding: "48px 16px",
+    boxSizing: "border-box",
+    background: "#f7f7fb",
+  },
+  container: {
+    maxWidth: 860,
+    margin: "0 auto",
+  },
+  header: {
+    marginBottom: 16,
+    textAlign: "left",
+  },
+  title: {
+    margin: 0,
+    fontSize: 28,
+    lineHeight: 1.2,
+    letterSpacing: "-0.02em",
+    color: "#111827",
+  },
+  subtitle: {
+    margin: "8px 0 0",
+    fontSize: 15,
+    lineHeight: 1.5,
+    color: "#6b7280",
+  },
+  card: {
+    border: "1px solid #e5e7eb",
+    borderRadius: 14,
+    background: "#ffffff",
+    boxShadow: "0 8px 24px rgba(17, 24, 39, 0.06)",
+    overflow: "hidden",
+  },
+  cardInner: {
+    padding: 18,
+  },
+  instructionsText: {
+    whiteSpace: "pre-wrap",
+    fontSize: 20,
+    lineHeight: 1.5,
+    color: "#111827",
+  },
+  footer: {
+    marginTop: 18,
+    display: "flex",
+    justifyContent: "center",
+  },
+  primaryButton: {
+    appearance: "none",
+    border: "1px solid #111827",
+    background: "#111827",
+    color: "#ffffff",
+    fontSize: 15,
+    fontWeight: 600,
+    padding: "10px 18px",
+    borderRadius: 12,
+    cursor: "pointer",
+    boxShadow: "0 6px 14px rgba(17, 24, 39, 0.18)",
+    transition: "transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease",
+  },
+};
