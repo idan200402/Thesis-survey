@@ -5,6 +5,7 @@ export default function About({ participant, setParticipant, onNext }) {
 
   const isValid = useMemo(() => {
     return (
+      participant.prolificId.trim().length > 0 &&
       participant.consent &&
       participant.age !== "" &&
       participant.gender &&
@@ -24,6 +25,16 @@ export default function About({ participant, setParticipant, onNext }) {
             type="number"
             value={participant.age}
             onChange={(e) => setParticipant({ age: e.target.value })}
+          />
+        </div>
+      {/*added prolific id field for better tracking of participants */}
+      
+        <div style={{ marginBottom: 12 }}>
+          <label>Prolific ID</label><br />
+          <input
+            type="text"
+            value={participant.prolificId}
+            onChange={(e) => setParticipant({ prolificId: e.target.value })}
           />
         </div>
 

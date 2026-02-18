@@ -40,8 +40,14 @@ export default function Feedback({ feedback, setFeedback, survey, onDone }) {
     setSubmitting(true);
     try {
       const payload = {
-        ...survey,
-        meta: { ...survey.meta, finishedAt: new Date().toISOString() }
+        meta: { ...survey.meta, finishedAt: new Date().toISOString() },
+        participant: survey.participant,
+        feedback: survey.feedback,
+        answers: survey.answers.map((a) => ({
+          trialId: a.trialId,
+          shownOrder: a.shownOrder,
+          chosenOptionId: a.chosenOptionId        }))
+
       };
       const res = await submitSurvey(payload);
       onDone(res.id);

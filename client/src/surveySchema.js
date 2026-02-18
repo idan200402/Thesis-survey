@@ -7,6 +7,7 @@ export function makeInitialSurveyState() {
 
   return {
     participant: {
+      prolificId: "",
       age: "",
       gender: "",
       education: "",
