@@ -1,7 +1,7 @@
 import React from "react";
 
 const PROLIFIC_URL =
-  "https://app.prolific.com/submissions/complete?cc=C1G95G4A"; // replace with yours
+  "https://app.prolific.com/submissions/complete?cc=C1G95G4A"; 
 
 export default function Done() {
   return (
