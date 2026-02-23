@@ -4,7 +4,7 @@
     "userQuestion": "What kind of food can I buy near Aristofanous  street ?",
     "responses": {
       "A": {
-        "text": "I can’t know exactly what’s near Aristofanous  Street, but the name “Aristofanous ” has a clearly Greek linguistic form. That suggests it’s likely located in Greece or a Greek-influenced area. If so, you would typically find classic Greek food nearby, such as souvlaki or gyro (grilled meat wrapped in pita with tzatziki), moussaka, spanakopita, Greek salad with olives and feta, and fresh baked goods. In a central area, there might be traditional tavernas and cafés, while in a quieter neighborhood, you’d more likely see a small grill house or bakery.",
+        "text": "I can’t know exactly what’s near Aristofanous  Street, but the name “Aristofanous ” has a clearly Greek linguistic form. That suggests **it’s likely located in Greece or a Greek-influenced area.** If so, you would typically find classic Greek food nearby, such as souvlaki or gyro (grilled meat wrapped in pita with tzatziki), moussaka, spanakopita, Greek salad with olives and feta, and fresh baked goods. In a central area, there might be traditional tavernas and cafés, while in a quieter neighborhood, you’d more likely see a small grill house or bakery.",
         "type": "appealing_truth"
       },
       "B": {
