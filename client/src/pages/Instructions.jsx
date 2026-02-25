@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { INSTRUCTIONS_TEXT } from "../surveySchema.js";
 
 export default function Instructions({ onNext }) {
@@ -14,7 +15,20 @@ export default function Instructions({ onNext }) {
 
         <section style={styles.card} aria-label="Instructions text">
           <div style={styles.cardInner}>
-            <div style={styles.instructionsText}>{INSTRUCTIONS_TEXT}</div>
+            <div style={styles.instructionsText}>
+  <ReactMarkdown
+    components={{
+      p: ({ children }) => <p style={styles.mdP}>{children}</p>,
+      strong: ({ children }) => <strong style={styles.mdStrong}>{children}</strong>,
+      ul: ({ children }) => <ul style={styles.mdUl}>{children}</ul>,
+      ol: ({ children }) => <ol style={styles.mdOl}>{children}</ol>,
+      li: ({ children }) => <li style={styles.mdLi}>{children}</li>,
+      br: () => <br />
+    }}
+  >
+    {INSTRUCTIONS_TEXT}
+  </ReactMarkdown>
+</div>
           </div>
         </section>
 
@@ -93,5 +107,22 @@ const styles = {
     cursor: "pointer",
     boxShadow: "0 6px 14px rgba(17, 24, 39, 0.18)",
     transition: "transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease",
+  },
+    mdP: {
+    margin: "0 0 1px 0"
+  },
+  mdStrong: {
+    fontWeight: 600
+  },
+  mdUl: {
+    margin: "6px 0 12px 20px",
+    padding: 0
+  },
+  mdOl: {
+    margin: "6px 0 12px 20px",
+    padding: 0
+  },
+  mdLi: {
+    marginBottom: 6
   },
 };
